@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiMP3 - Convertidor YouTube a MP3</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>🎵 MiMP3</h1>
+        <p>Convierte videos de YouTube a MP3 al instante</p>
+        {% if error %}
+            <div class="error">{{ error }}</div>
+        {% endif %}
+        <form method="POST">
+            <input type="text" name="url" placeholder="Pega aquí el enlace de YouTube" required />
+            <button type="submit">Convertir y Descargar</button>
+        </form>
+    </div>
+</body>
+</html>
